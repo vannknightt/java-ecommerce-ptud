@@ -23,7 +23,7 @@ public class OrderController {
 	@Autowired
 	OrderRepo repo;
 	
-	@CrossOrigin(origins = "http://localhost:8081", allowCredentials="true")
+	@CrossOrigin(origins = {"http://localhost:8081", "https://ptud.vercel.app"}, allowCredentials="true")
 	@PutMapping("/order/{id}/{status}")
 	public ResponseEntity<Optional<Order>> SetStatus(@PathVariable("id") String id, @PathVariable("status") int status) {
 		Optional<Order> order = repo.findById(id);
