@@ -52,10 +52,10 @@ public class Product {
 		this.Category = Category;
 	}
 	
-	public String getimagepath() {
+	public String getimagePath() {
 		return ImagePath;
 	}
-	public void setimagepath(String ImagePath) {
+	public void setimagePath(String ImagePath) {
 		this.ImagePath = ImagePath;
 	}
 	

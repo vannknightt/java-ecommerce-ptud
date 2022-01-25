@@ -3,23 +3,33 @@ package ecommerce.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Shipper")
+@Document(collection = "ShipperCoor")
 
 public class Shipper {
 	 @Id
 	 private String id;
 	 private String name;
+	 private String avatar;
 	 private String phone;	 
 	 private String address;
 	 private String negative_cert;
 	 private String vaccine_cert;
 	 private String identify;
 	 
+	 private Object coor;
+	 
 	 public String getid() {
 		 return id;
 	 }
 	 public String setid(String id) {
 		 return this.id = id;
+	 }
+	 
+	 public String getavatar() {
+		 return avatar;
+	 }
+	 public String setavatar(String avatar) {
+		 return this.avatar = avatar;
 	 }
 	 
 	 public String getname() {
@@ -62,5 +72,12 @@ public class Shipper {
 	 }
 	 public String setidentify(String identify) {
 		 return this.identify = identify;
+	 }
+	 
+	 public Object getcoor() {
+		 return coor;
+	 }
+	 public Object setcoor(Object coor) {
+		 return this.coor = coor;
 	 }
 }

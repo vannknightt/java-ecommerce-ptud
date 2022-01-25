@@ -1,5 +1,6 @@
 package ecommerce.model;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -17,11 +18,12 @@ public class Order {
     private int status;
     private int total;
     private int shipper_fee;
+    
     private boolean cert_shop;
     private boolean cert_cus;
 
-    private String created_at;
-    private String updated_at;
+    private Date created_at;
+    private Date updated_at;
     
     private List<OrderDetail> order_detail;
     
@@ -84,13 +86,6 @@ public class Order {
 		this.shipper_fee = shipper_fee;
 	}
 	
-	public String getcreated_at() {
-		return created_at;
-	}
-	public void setcreated_at(String created_at) {
-		this.created_at = created_at;
-	}
-	
 	public boolean getcert_shop() {
 		return cert_shop;
 	}
@@ -105,10 +100,18 @@ public class Order {
 		this.cert_cus = cert_cus;
 	}
 	
-	public String getupdated_at() {
+	public Date getcreated_at() {
+		return created_at;
+	}
+	public void setcreated_at(Date created_at) {
+		this.created_at = created_at;
+	}
+	
+	
+	public Date getupdated_at() {
 		return updated_at;
 	}
-	public void setupdated_at(String updated_at) {
+	public void setupdated_at(Date updated_at) {
 		this.updated_at = updated_at;
 	}
 	

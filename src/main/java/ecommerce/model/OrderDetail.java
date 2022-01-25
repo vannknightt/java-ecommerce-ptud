@@ -2,45 +2,45 @@ package ecommerce.model;
 
 
 public class OrderDetail {
-    private String product_id;
-    private String product_name;
-    private int product_price;
-    private int product_quantity;
-    private String image_path;
+    private String ProductID;
+    private String Name;
+    private int Price;
+    private int Quantity;
+    private String ImagePath;
     
     
     public String getproduct_id() {
-		return product_id;
+		return ProductID;
 	}
 	public void setproduct_id(String product_id) {
-		this.product_id = product_id;
+		this.ProductID = product_id;
 	}
 	
 	public String getproduct_name() {
-		return product_name;
+		return Name;
 	}
 	public void setproduct_name(String product_name) {
-		this.product_name = product_name;
+		this.Name = product_name;
 	}
 	
 	public int getproduct_price() {
-		return product_price;
+		return Price;
 	}
 	public void setproduct_price(int product_price) {
-		this.product_price = product_price;
+		this.Price = product_price;
 	}
 
 	public int getproduct_quantity() {
-		return product_quantity;
+		return Quantity;
 	}
 	public void setproduct_quantity(int product_quantity) {
-		this.product_quantity = product_quantity;
+		this.Quantity = product_quantity;
 	}
 	
 	public String getimage_path() {
-		return image_path;
+		return ImagePath;
 	}
 	public void setimage_path(String image_path) {
-		this.image_path = image_path;
+		this.ImagePath = image_path;
 	}
 }
