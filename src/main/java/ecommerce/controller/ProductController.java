@@ -34,7 +34,7 @@ public class ProductController {
 	@Autowired
 	public MongoTemplate mongoTemplate;
 	
-	@CrossOrigin(origins = "http://localhost:8081", allowCredentials="true")
+	@CrossOrigin(origins = {"http://localhost:8081", "https://ptud.vercel.app"}, allowCredentials="true")
 	@GetMapping("/products/{id}")
 	public ResponseEntity<Optional<Product>> GetProduct(@PathVariable("id") String id) {
 		try {
@@ -49,7 +49,7 @@ public class ProductController {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://localhost:8081", allowCredentials="true")
+	@CrossOrigin(origins = {"http://localhost:8081", "https://ptud.vercel.app"}, allowCredentials="true")
 	@PutMapping("/products/{id}")
 	public ResponseEntity<Optional<Product>> AddComment(@PathVariable("id") String id, @RequestBody Comments comment) {
 		Optional<Product> product = repo.findById(id);
