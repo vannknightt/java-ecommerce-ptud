@@ -22,7 +22,7 @@ public class ShipperController {
 	@Autowired 
 	ShipperRepo repo;
 	
-	@CrossOrigin(origins = {"http://localhost:8081", "https://ptud.vercel.app"}, allowCredentials="true")
+	@CrossOrigin(origins = {"http://localhost:8081", "https://client-eccomerce-ptud.vercel.app"}, allowCredentials="true")
 	@GetMapping("/shipper")
 	public ResponseEntity<List<Shipper>> GetShipperList() {
 		try {
